@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6MV2N6JVNZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6MV2N6JVNZ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 공부 스타일 테스트 - 너의 공부 성향은?</title>
+    
+    <!-- SEO 메타 태그 -->
+    <meta name="description" content="12개의 질문으로 알아보는 나의 공부 스타일! 16가지 유형별 맞춤 공부법을 확인해보세요.">
+    <meta name="keywords" content="공부 스타일, 심리테스트, 공부법, 학습법, 성격 테스트">
+    
+    <!-- Open Graph (페이스북, 카카오톡 등) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="🧠 공부 스타일 테스트 - 너의 공부 성향은?">
+    <meta property="og:description" content="12개의 질문으로 알아보는 나의 찐 공부법! 16가지 유형별 맞춤 학습 방법을 확인해보세요.">
+    <meta property="og:url" content="https://troypark.github.io/learningstyletest/">
+    <meta property="og:site_name" content="공부 스타일 테스트">
+    <meta property="og:image" content="https://troypark.github.io/learningstyletest/thumbnail.jpg">
+    <meta property="og:image:secure_url" content="https://troypark.github.io/learningstyletest/thumbnail.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="공부 스타일 테스트 썸네일">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="🧠 공부 스타일 테스트">
+    <meta name="twitter:description" content="12개의 질문으로 알아보는 나의 찐 공부법!">
+    <meta name="twitter:image" content="https://troypark.github.io/learningstyletest/thumbnail.jpg">
+    <meta name="twitter:image:alt" content="공부 스타일 테스트 썸네일">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: linear-gradient(135deg, #FFE5F1 0%, #FFF4E6 50%, #E8F5E9 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            padding-top: 100px;
+        }
+        
+        .top-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #FFB6C1 0%, #FFD700 100%);
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(255,182,193,0.3);
+            overflow: hidden;
+        }
+        
+        .top-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.4) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            animation: shine 3s ease-in-out infinite;
+        }
+        
+        @keyframes shine {
+            0% {
+                left: -100%;
+            }
+            50% {
+                left: 100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+        
+        .banner-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .banner-logo {
+            height: 40px;
+        }
+        
+        .banner-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .banner-text h2 {
+            font-size: 1.5em;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+        
+        .banner-text p {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+        
+        .banner-btn {
+            background: white;
+            color: #FF6B9D;
+            border: 2px solid rgba(255,255,255,0.5);
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1em;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .banner-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(255,255,255,0.5);
+            background: #FFF;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 40px;
+            box-shadow: 0 10px 40px rgba(255,182,193,0.2), 0 0 0 1px rgba(255,182,193,0.1);
+            max-width: 700px;
+            width: 100%;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,182,193,0.08) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .start-section {
+            text-align: center;
+        }
+        
+        .start-section h1 {
+            font-size: 2.5em;
+            background: linear-gradient(135deg, #FF6B9D 0%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+        
+        .start-section .emoji {
+            font-size: 8em;
+            margin: 30px 0;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .start-section p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .start-btn {
+            background: linear-gradient(135deg, #FF6B9D 0%, #FFB6C1 50%, #FFD700 100%);
+            color: white;
+            border: none;
+            padding: 20px 60px;
+            font-size: 1.3em;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 30px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255,107,157,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .start-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .start-btn:hover::before {
+            left: 100%;
+        }
+        
+        .start-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255,107,157,0.5);
+        }
+        
+        .quiz-section {
+            display: none;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 15px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FF6B9D 0%, #FFB6C1 50%, #FFD700 100%);
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+        
+        .question-number {
+            font-size: 1.1em;
+            color: #FF6B9D;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .question {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 40px;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .option-btn {
+            background: linear-gradient(135deg, #FFF9F9 0%, #FFFBF0 100%);
+            border: 2px solid rgba(255,107,157,0.2);
+            padding: 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            font-size: 1.1em;
+            color: #333;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
+            box-shadow: 0 2px 8px rgba(255,182,193,0.1);
+        }
+        
+        .option-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,107,157,0.15), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        @media (hover: hover) {
+            .option-btn:hover {
+                border-color: #FF6B9D;
+                transform: translateX(10px);
+                background: linear-gradient(135deg, #FFF0F5 0%, #FFF8E1 100%);
+                box-shadow: 0 4px 15px rgba(255,107,157,0.2);
+            }
+            
+            .option-btn:hover::before {
+                left: 100%;
+            }
+        }
+        
+        .option-btn:active {
+            transform: scale(0.98);
+            background: linear-gradient(135deg, #FFE5F1 0%, #FFF4E6 100%);
+        }
+        
+        .result-section {
+            display: none;
+            text-align: center;
+        }
+        
+        .result-image {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+            display: block;
+            animation: pop 0.6s ease-out;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(255,182,193,0.3);
+        }
+        
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .share-btn-main, .save-image-btn {
+            background: linear-gradient(135deg, #FF6B9D 0%, #FFB6C1 50%, #FFD700 100%);
+            color: white;
+            border: none;
+            padding: 15px 50px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            font-size: 1.2em;
+            box-shadow: 0 8px 25px rgba(255,107,157,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .share-btn-main::before, .save-image-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .share-btn-main:hover::before, .save-image-btn:hover::before {
+            left: 100%;
+        }
+        
+        .share-btn-main:hover, .save-image-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255,107,157,0.5);
+        }
+        
+        .save-image-btn {
+            background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+            box-shadow: 0 8px 25px rgba(78,205,196,0.4);
+        }
+        
+        .save-image-btn:hover {
+            box-shadow: 0 12px 35px rgba(78,205,196,0.5);
+        }
+        
+        @keyframes pop {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .result-description {
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .result-study-method {
+            background: linear-gradient(135deg, rgba(255,107,157,0.08) 0%, rgba(255,182,193,0.08) 50%, rgba(255,215,0,0.08) 100%);
+            padding: 30px;
+            border-radius: 25px;
+            margin: 30px 0;
+            text-align: left;
+            border: 2px solid rgba(255,107,157,0.15);
+            box-shadow: 0 4px 15px rgba(255,182,193,0.1);
+        }
+        
+        .result-study-method h3 {
+            background: linear-gradient(135deg, #FF6B9D 0%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .result-study-method ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .result-study-method li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #555;
+            font-size: 1.1em;
+        }
+        
+        .result-study-method li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+        }
+        
+        .restart-btn {
+            background: linear-gradient(135deg, #FFB6C1 0%, #FFD700 100%);
+            color: #333;
+            border: 2px solid rgba(255,255,255,0.5);
+            padding: 15px 50px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 30px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(255,182,193,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .restart-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .restart-btn:hover::before {
+            left: 100%;
+        }
+        
+        .restart-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255,182,193,0.4);
+        }
+        
+        .disclaimer {
+            font-size: 0.85em;
+            color: #999;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                padding-top: 75px;
+                min-height: 100vh;
+            }
+            
+            .container {
+                padding: 20px 15px;
+                margin: 0 auto;
+            }
+            
+            .top-banner {
+                padding: 8px 10px;
+            }
+            
+            .banner-content {
+                flex-direction: row;
+                gap: 8px;
+                align-items: center;
+            }
+            
+            .banner-logo {
+                height: 18px;
+                flex-shrink: 0;
+            }
+            
+            .banner-text {
+                flex: 1;
+                min-width: auto;
+            }
+            
+            .banner-text h2 {
+                font-size: 0.7em;
+                margin-bottom: 2px;
+                line-height: 1.3;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            
+            .banner-text p {
+                font-size: 0.65em;
+                line-height: 1.3;
+            }
+            
+            .banner-btn {
+                padding: 6px 12px;
+                font-size: 0.75em;
+            }
+            
+            .start-section h1 {
+                font-size: 1.6em;
+                margin-bottom: 15px;
+            }
+            
+            .start-section .emoji {
+                font-size: 4em;
+                margin: 20px 0;
+            }
+            
+            .start-section p {
+                font-size: 1em;
+                margin-bottom: 10px;
+            }
+            
+            .start-btn {
+                padding: 16px 45px;
+                font-size: 1.1em;
+                margin-top: 20px;
+            }
+            
+            .progress-bar {
+                height: 10px;
+                margin-bottom: 20px;
+            }
+            
+            .question-number {
+                font-size: 0.9em;
+                margin-bottom: 10px;
+            }
+            
+            .question {
+                font-size: 1.1em;
+                margin-bottom: 25px;
+            }
+            
+            .options {
+                gap: 12px;
+            }
+            
+            .option-btn {
+                font-size: 0.95em;
+                padding: 18px;
+            }
+            
+            .result-image {
+                max-width: 250px;
+                margin: 10px auto;
+            }
+            
+            .result-description {
+                font-size: 0.9em;
+                margin-bottom: 15px;
+                line-height: 1.5;
+            }
+            
+            .result-study-method {
+                padding: 15px;
+                margin: 15px 0;
+            }
+            
+            .result-study-method h3 {
+                font-size: 1.1em;
+                margin-bottom: 12px;
+            }
+            
+            .result-study-method li {
+                font-size: 0.85em;
+                padding: 6px 0;
+                padding-left: 25px;
+                line-height: 1.4;
+            }
+            
+            .result-study-method li::before {
+                font-size: 0.9em;
+            }
+            
+            .share-buttons {
+                margin-top: 15px;
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .share-btn-main, .save-image-btn {
+                padding: 12px 35px;
+                font-size: 1em;
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .restart-btn {
+                padding: 12px 35px;
+                font-size: 1em;
+                margin-top: 12px;
+            }
+            
+            .disclaimer {
+                font-size: 0.75em;
+                margin-top: 10px;
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 상단 띠배너 -->
+    <div class="top-banner">
+        <div class="banner-content">
+            <img src="bi.png" alt="에이닷 영어학원" class="banner-logo">
+            <div class="banner-text">
+                <h2>🎯 1:1 맞춤 영어학원 | 성적이 오르는 에이닷</h2>
+                <p>우리학교 맞춤! 학생에 맞춤! 최적의 영어 학습법 💡</p>
+            </div>
+            <a href="https://www.adotenglish.com/" target="_blank" class="banner-btn" onclick="trackHomepageClick()">알아보기</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="content">
+            <!-- 시작 화면 -->
+            <div class="start-section" id="startSection">
+                <h1>🧠 공부 스타일 테스트</h1>
+                <div class="emoji">🤓</div>
+                <p>나는 어떤 공부 스타일일까?</p>
+                <p style="font-size: 1em; color: #999;">12개의 질문으로 알아보는 나의 찐 공부법</p>
+                <button class="start-btn" onclick="startQuiz()">시작하기</button>
+            </div>
+            
+            <!-- 질문 화면 -->
+            <div class="quiz-section" id="quizSection">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+                <div class="question-number" id="questionNumber"></div>
+                <div class="question" id="question"></div>
+                <div class="options" id="options"></div>
+            </div>
+            
+            <!-- 결과 화면 -->
+            <div class="result-section" id="resultSection">
+                <img class="result-image" id="resultImage" src="" alt="결과 이미지">
+                <div class="result-description" id="resultDescription"></div>
+                <div class="result-study-method">
+                    <h3>💡 너를 위한 공부법</h3>
+                    <ul id="studyMethods"></ul>
+                </div>
+                
+                <p class="disclaimer">본 테스트는 공식 심리검사가 아니며 참고용입니다.</p>
+                
+                <!-- 공유하기 버튼 -->
+                <div class="share-buttons">
+                    <button class="share-btn-main" onclick="shareResult()">
+                        📤 공유하기
+                    </button>
+                    <button class="save-image-btn" onclick="saveResultImage()">
+                        💾 이미지 저장
+                    </button>
+                </div>
+                
+                <button class="restart-btn" onclick="restartQuiz()">다시 하기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메인 로직 파일 -->
+    <script src="app.js"></script>
+    
+    <!-- 네이버 애널리틱스 -->
+    <script type="text/javascript" src="//wcs.pstatic.net/wcslog.js"></script>
+    <script type="text/javascript">
+    if(!wcs_add) var wcs_add = {};
+    wcs_add["wa"] = "152837749e1fda0";
+    if(window.wcs) {
+      wcs_do();
+    }
+    </script>
+</body>
+</html>
+
