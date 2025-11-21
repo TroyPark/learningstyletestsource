@@ -137,13 +137,19 @@
         .banner-text .highlight-text::after {
             content: '';
             position: absolute;
-            bottom: 2px;
+            bottom: -2px;
             left: 0;
             right: 0;
             height: 3px;
             background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
             border-radius: 2px;
             opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .banner-text .highlight-text::after {
+                bottom: -4px;
+            }
         }
         
         .banner-text p {
@@ -220,8 +226,10 @@
         }
         
         .start-section .emoji {
-            font-size: 8em;
-            margin: 30px 0;
+            width: 100%;
+            max-width: 300px;
+            margin: 30px auto;
+            display: block;
             animation: bounce 2s ease-in-out infinite;
         }
         
@@ -594,8 +602,8 @@
             }
             
             .start-section .emoji {
-                font-size: 4em;
-                margin: 20px 0;
+                max-width: 200px;
+                margin: 20px auto;
             }
             
             .start-section p {
@@ -669,6 +677,7 @@
                 margin-top: 15px;
                 flex-direction: column;
                 gap: 10px;
+                align-items: center;
             }
             
             .share-btn-main, .save-image-btn {
@@ -710,7 +719,7 @@
             <!-- 시작 화면 -->
             <div class="start-section" id="startSection">
                 <h1>🧠 공부 스타일 테스트</h1>
-                <div class="emoji">🤓</div>
+                <img src="main_image.png" alt="공부 스타일 테스트" class="emoji">
                 <p>나는 어떤 공부 스타일일까?</p>
                 <p style="font-size: 1em; color: #999;">12개의 질문으로 알아보는 나의 찐 공부법</p>
                 <button class="start-btn" onclick="startQuiz()">시작하기</button>
