@@ -127,6 +127,25 @@
             margin-bottom: 5px;
         }
         
+        .banner-text .highlight-text {
+            color: inherit;
+            font-weight: 900;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .banner-text .highlight-text::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
+            border-radius: 2px;
+            opacity: 0.9;
+        }
+        
         .banner-text p {
             font-size: 1em;
             opacity: 0.9;
@@ -679,7 +698,7 @@
         <div class="banner-content">
             <img src="bi.png" alt="에이닷 영어학원" class="banner-logo">
             <div class="banner-text">
-                <h2>🎯 1:1 맞춤 영어학원 | 성적이 오르는 에이닷</h2>
+                <h2>🎯 <span class="highlight-text">1:1 맞춤 영어학원</span> | 성적이 오르는 에이닷</h2>
                 <p>우리학교 맞춤! 학생에 맞춤! 최적의 영어 학습법 💡</p>
             </div>
             <a href="https://www.adotenglish.com/" target="_blank" class="banner-btn" onclick="trackHomepageClick()">알아보기</a>
